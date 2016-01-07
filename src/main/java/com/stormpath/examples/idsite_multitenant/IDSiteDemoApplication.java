@@ -1,4 +1,4 @@
-package com.stormpath.idsite_demo;
+package com.stormpath.examples.idsite_multitenant;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

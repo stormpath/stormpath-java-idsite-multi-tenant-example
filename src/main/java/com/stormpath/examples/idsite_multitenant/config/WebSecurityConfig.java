@@ -1,4 +1,4 @@
-package com.stormpath.idsite_demo.config;
+package com.stormpath.examples.idsite_multitenant.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

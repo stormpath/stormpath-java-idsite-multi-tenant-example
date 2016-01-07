@@ -1,7 +1,5 @@
-package com.stormpath.idsite_demo.controllers;
+package com.stormpath.examples.idsite_multitenant.controllers;
 
-import com.stormpath.sdk.application.Application;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,16 +7,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
-public class HomeController {
-    @Autowired
-    Application app;
+public class HomeController extends BaseController {
 
     @RequestMapping("/")
     public String home(HttpServletRequest req, Model model) {
         model.addAttribute("status", req.getParameter("status"));
 
-        model.addAttribute("appName", app.getName());
-        model.addAttribute("appDescription", app.getDescription());
+        model.addAttribute("appName", application.getName());
+        model.addAttribute("appDescription", application.getDescription());
+        model.addAttribute("organization", getOrganizationNameKey(req).toUpperCase());
 
         return "home";
     }

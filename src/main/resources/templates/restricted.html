@@ -12,7 +12,8 @@
                     <img src="https://stormpath.com/images/template/logo-nav.png"/>
                 </div>
                 <p/>
-                <img th:src="${orgImageHref}" width="300"/>
+                <h1 th:inline="text">Welcome [[${organization}]] Organization to WizBang!</h1>
+                <img th:if="${orgImageHref}" th:src="${orgImageHref}" width="300"/>
 
                 <h1 th:inline="text">Hey, [[${account.fullName}]]</h1>
 
