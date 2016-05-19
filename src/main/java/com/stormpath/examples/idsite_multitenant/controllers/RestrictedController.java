@@ -17,9 +17,9 @@ public class RestrictedController extends BaseController {
 
         CustomData customData = application.getCustomData();
         String orgImageHref = (String)customData.get(organization + "_image_href");
-       if (orgImageHref != null) {
-           model.addAttribute("orgImageHref", orgImageHref);
-       }
+        if (orgImageHref != null) {
+            model.addAttribute("orgImageHref", orgImageHref);
+        }
 
         return "restricted";
     }

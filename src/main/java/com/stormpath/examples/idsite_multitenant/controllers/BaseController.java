@@ -4,6 +4,7 @@ import com.stormpath.sdk.application.Application;
 import com.stormpath.sdk.client.Client;
 import com.stormpath.sdk.servlet.http.Resolver;
 import com.stormpath.sdk.servlet.idsite.IdSiteOrganizationContext;
+import com.sun.tools.javac.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -18,10 +19,10 @@ public class BaseController {
     Application application;
 
     @Autowired
-    Resolver<IdSiteOrganizationContext> stormpathIdSiteOrganizationResolver;
+    Resolver<String> stormpathOrganizationNameKeyResolver;
 
     String getOrganizationNameKey(HttpServletRequest req) {
-        return stormpathIdSiteOrganizationResolver.get(req, null).getOrganizationNameKey();
+        return stormpathOrganizationNameKeyResolver.get(req, null);
     }
 
 }
