@@ -3,8 +3,6 @@ package com.stormpath.examples.idsite_multitenant.controllers;
 import com.stormpath.sdk.application.Application;
 import com.stormpath.sdk.client.Client;
 import com.stormpath.sdk.servlet.http.Resolver;
-import com.stormpath.sdk.servlet.idsite.IdSiteOrganizationContext;
-import com.sun.tools.javac.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
