@@ -17,7 +17,9 @@
 
                 <h1 th:inline="text">Hey, [[${account.fullName}]]</h1>
 
-                <a class="btn btn-danger" href="/logout">Log Out</a>
+                <form method="post" action="/logout">
+                    <input type="submit" class="btn btn-danger" value="Log Out"/>
+                </form>
                 <a class="btn btn-success" href="/">Go Home</a>
             </div>
         </div>
